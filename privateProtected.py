@@ -1,7 +1,8 @@
 
-
+#protected 
 class Protected:
     def __init__(self):
+        #Private is indicated with the double underscore
         self.__privateVar = 17
 
     def getPrivate(self):
