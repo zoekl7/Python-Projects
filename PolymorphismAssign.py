@@ -42,7 +42,7 @@ class Pilots(User):
         entry_name = input("Enter your name: ")
         entry_email = input("Enter your email: ")
         entry_planeNum = input("Enter your aircrafts number: ")
-        if (entry_email == self.email and entry_planeNum == self.entry_planeNum):
+        if (entry_email == self.email and entry_planeNum == self.pin_num):
             print("Welcome back, {}!".format(entry_name))
         else:
             print("The pin or email in incorrect.")
@@ -53,7 +53,7 @@ Jedi = User()
 Jedi.getLoginInfo()
 
 pilot = Pilots()
-Pilots.getLoginInfor
+Pilots.getLoginInfo()
 
 manager = Rebel()
-manager.getLoginInfo
+manager.getLoginInfo()
