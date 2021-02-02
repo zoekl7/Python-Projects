@@ -9,7 +9,7 @@ def home(request):
         pk = request.POST['account']
         return balance(request, pk)
     content = {'form': form}
-    return render(request, 'checkbook/index.html')
+    return render(request, 'checkbook/index.html', content)
 
 def create_account(request):
     form = AccountForm(data=request.POST or None)
@@ -20,7 +20,7 @@ def create_account(request):
     content = {'form': form}
     return render(request, 'checkbook/CreateNewAccount.html', content)
 
-def balance(request):
+def balance(request, pk):
     account = get_object_or_404(Account, pk = pk)
     transactions = Transaction.Transactions.filter(account = pk)
     current_total = account.initial_deposit
